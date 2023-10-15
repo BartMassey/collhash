@@ -9,13 +9,14 @@ When run without any feature flags, this program prints
      false
      false
      false
+     false
      true
      true
 
-The first three `false`s indicates that it is apparently not
+The first four `false`s indicates that it is apparently not
 necessary to hash in the length for arrays of `str`s
 (probably because the length of each `str` is hashed in
-anyway). However, the fourth and fifth `true` indicate that
+anyway). However, the fifth and sixth `true` indicate that
 different slices of `unit` hash identically (probably
 because each of these is a zero-sized type and thus no
 actual hashing is performed).
